@@ -1,6 +1,14 @@
-import pandas as pd
+# Count the number of volcanoes by country
+volcano_counts = df['Country'].value_counts()
 
-url = 'https://gist.githubusercontent.com/mattkram/9684863843254402942dfede27af2cb7/raw/2590dd8185b833aacf247c0595edbb07a025a6d7/Smithsonian_VOTW_Holocene_Volcanoes.csv'
-df = pd.read_csv(url)
+# Plot the data chart
+plt.figure(figsize=(12, 6))
+volcano_counts.plot(kind='bar')
+plt.xlabel('Country')
+plt.ylabel('Number of Volcanoes')
+plt.title('Number of Volcanoes by Country')
+plt.xticks(rotation=45)
+plt.tight_layout()
 
-df.head(10)
+# Save the chart as an image
+plt.savefig('volcano_chart.png')
