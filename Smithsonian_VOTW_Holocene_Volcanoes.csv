@@ -3,4 +3,4 @@ import pandas as pd
 url = 'https://gist.githubusercontent.com/mattkram/9684863843254402942dfede27af2cb7/raw/2590dd8185b833aacf247c0595edbb07a025a6d7/Smithsonian_VOTW_Holocene_Volcanoes.csv'
 df = pd.read_csv(url)
 
-print(df.head())
+df.head(10)
